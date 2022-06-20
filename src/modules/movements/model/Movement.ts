@@ -1,6 +1,6 @@
 import { v4 as uuidV4 } from 'uuid';
 
-class Appointment {
+class Movement {
   id: string;
   cd_dti_agenda?: number;
   tp_fluxo: string;
@@ -37,4 +37,4 @@ class Appointment {
   }
 }
 
-export { Appointment };
+export { Movement };

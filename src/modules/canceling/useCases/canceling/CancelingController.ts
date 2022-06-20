@@ -3,15 +3,15 @@ import { Request, Response } from 'express';
 import { CancelingUseCase } from './CancelingUseCase';
 
 class CancelingController {
-  constructor(private cancelingUseCase: CancelingUseCase) {}
+  constructor(private cancelingUseCase: CancelingUseCase) { }
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { appointmentId } = request.params;
+    const { movementId } = request.params;
     const { reason, patientBenefitCode, tp_status, tp_movimento } =
       request.body;
     try {
       const result = await this.cancelingUseCase.execute({
-        appointmentId,
+        movementId,
         reason,
         patientBenefitCode,
         tp_status,
@@ -23,7 +23,7 @@ class CancelingController {
       return response.status(500).json({
         message:
           error.message ||
-          'Mensagem descrevendo o erro que ocorreu em canceling AppointmentId!',
+          'Mensagem descrevendo o erro que ocorreu em canceling MovementId!',
       });
     }
   }

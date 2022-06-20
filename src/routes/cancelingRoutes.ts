@@ -4,7 +4,7 @@ import { cancelingController } from '../modules/canceling/useCases/canceling';
 const cancelingRoutes = Router();
 
 cancelingRoutes.post(
-  '/appointments/:appointmentId/canceling',
+  '/movements/:movementId/canceling',
   (request, response) => {
     return cancelingController.handle(request, response);
   },

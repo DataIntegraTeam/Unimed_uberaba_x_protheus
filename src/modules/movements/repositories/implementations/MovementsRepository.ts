@@ -1,19 +1,19 @@
-import { Appointment } from '../../model/Appointment';
-import { IAppointmentsRepository } from '../IAppointmentsRepository';
+import { Movement } from '../../model/Movement';
+import { IMovementsRepository } from '../IMovementsRepository';
 import knex from '../../../../database/db';
 
-export class AppointmentsRepository implements IAppointmentsRepository {
-  private static INSTANCE: AppointmentsRepository;
+export class MovementsRepository implements IMovementsRepository {
+  private static INSTANCE: MovementsRepository;
 
-  private constructor() {}
-  public static getInstance(): AppointmentsRepository {
-    if (!AppointmentsRepository.INSTANCE) {
-      AppointmentsRepository.INSTANCE = new AppointmentsRepository();
+  private constructor() { }
+  public static getInstance(): MovementsRepository {
+    if (!MovementsRepository.INSTANCE) {
+      MovementsRepository.INSTANCE = new MovementsRepository();
     }
-    return AppointmentsRepository.INSTANCE;
+    return MovementsRepository.INSTANCE;
   }
 
-  async create(data: Appointment): Promise<void | Error> {
+  async create(data: Movement): Promise<void | Error> {
     console.log(data);
     try {
       // CD_AGENDAMENTO_INTEGRA > FROM dbamv.it_agenda_central
@@ -31,7 +31,7 @@ export class AppointmentsRepository implements IAppointmentsRepository {
         `SELECT cd_dti_agenda FROM dataintegra.tbl_dti_agendamento WHERE cd_produto = '${data.productId}' AND nr_carteira = '${data.patient.benefitCode}'`,
       );
       if (result) {
-        throw new Error('forbiddenAppointment');
+        throw new Error('forbiddenMovement');
       }
 
       const seq_agenda = await knex.raw(
