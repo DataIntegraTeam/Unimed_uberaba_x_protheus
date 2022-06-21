@@ -5,9 +5,9 @@ class Movements {
   documento: {
     filial: number; // "filial":"001001"
     numero: number; //"numero":"123456789"
-    textoObservacao: string; //"texto obeservacao"
-    cCustos: number; //"ccustos":"252627"
-    cContail: number; //"ccontail":"353637"
+    observacao: string; //"texto obeservacao"
+    ccustos: number; //"ccustos":"252627"
+    ccontail: number; //"ccontail":"353637"
     tipo: string; //"tipo":"E"
   }
 
@@ -23,14 +23,23 @@ class Movements {
     cartao: number; //"cartao":"001.0001.0001.10000"
  }
  
- Itens: {
+ Itens: [{
   produto: number; //"produto":"00100100"
   lote: string; //"lote":"ABCDEF",
   validade: Date; //"validade":"31/12/2023",
   unidade: string; //"unidade":"CX",
   armazem: number; //"armazem":"10",
-  contagem: number; //"contagem":13
+  quantidade: number; //"contagem":13
+},
+{
+  produto: number; //"produto":"00100100"
+  lote: string; //"lote":"ABCDEF",
+  validade: Date; //"validade":"31/12/2023",
+  unidade: string; //"unidade":"CX",
+  armazem: number; //"armazem":"10",
+  quantidade: number; //"contagem":13
 }
+]
 /*
   constructor() {
     if (!this.id) {

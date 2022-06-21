@@ -5,10 +5,9 @@ class Inventory {
   documento: {
     filial: number; // "filial":"001001"
     numero: number; //"numero":"123456789"
-    textoObservacao: string; //"texto obeservacao"
-    cCustos: number; //"ccustos":"252627"
-    cContail: number; //"ccontail":"353637"
-    tipo: string; //"tipo":"E"
+    observacao: string; //"texto obeservacao"
+    ccustos: number; //"ccustos":"252627"
+    ccontail: number; //"ccontail":"353637"
   }
 
   Auditoria: {
@@ -16,7 +15,15 @@ class Inventory {
     data: Date; //data":"15/01/2022" e "hora":"15:30:25"
   }
 
-  Itens: {
+  Itens: [{
+    produto: number; //"produto":"00100100"
+    lote: string; //"lote":"ABCDEF",
+    validade: Date; //"validade":"31/12/2023",
+    unidade: string; //"unidade":"CX",
+    armazem: number; //"armazem":"10",
+    contagem: number; //"contagem":13
+  },
+  {
     produto: number; //"produto":"00100100"
     lote: string; //"lote":"ABCDEF",
     validade: Date; //"validade":"31/12/2023",
@@ -24,6 +31,7 @@ class Inventory {
     armazem: number; //"armazem":"10",
     contagem: number; //"contagem":13
   }
+]
     constructor() {
     
     }
