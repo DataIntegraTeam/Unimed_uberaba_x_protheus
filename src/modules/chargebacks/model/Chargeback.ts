@@ -1,40 +1,18 @@
 import { v4 as uuidV4 } from 'uuid';
 
 class Chargeback {
-  id: string;
-  cd_dti_agenda?: number;
-  tp_fluxo: string;
-  tp_status: string;
-  ds_erro: string;
-  dt_gerado: string;
-  tp_registro: string;
-  dt_processado: string;
-  tp_movimento: string;
-  cd_multi_empresa: string;
-  reason: string;
-  cd_agendamento_integra: string;
-  appointmentId: string;
-  slotId: string;
-  professionalId: string;
-  unitId: string;
-  productId: string;
-  telemedicine: string;
-  patient: {
-    benefitCode: string;
-    phone: string;
-    email: string;
-    name: string;
-    birthDate: Date;
-    document: {
-      type: string;
-      number: string;
-    };
-  };
+  documento: {
+    filial: number; // "filial":"001001"
+    numero: number; //"numero":"123456789"
+    observacao: string; //"texto obeservacao"
+  }
+  Auditoria: {
+    usuario: string; //"admin"
+    data: Date; //data":"15/01/2022" e "hora":"15:30:25"
+  }
+
   constructor() {
-    if (!this.id) {
-      this.id = uuidV4();
+
     }
   }
-}
-
 export { Chargeback };
