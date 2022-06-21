@@ -1,6 +1,12 @@
 # Unimed-uberaba-x-Protheus
 Integração Unimed Uberaba x Protejus
 
+Movimentação = Movement
+Inventário = Inventory
+Transferência = Reassignment
+Estorno = Chargeback
+
+
 Movimentação
 Post 
 
