@@ -1,11 +1,9 @@
 import { Router } from 'express';
 
-import { unitsRoutes } from './unitsRoutes';
-import { professionalsRoutes } from './professionalsRoutes';
-import { slotsRoutes } from './slotsRoutes';
-import { appointmentsRoutes } from './appointmentsRoutes';
-import { cancelingRoutes } from './cancelingRoutes';
-import { revenuesRoutes } from './revenuesRoutes';
+import { movementsRoutes } from './movementsRoutes';
+import { inventorysRoutes } from './inventorysRoutes';
+import { reassignmentsRoutes } from './reassignmentsRoutes';
+import { chargebacksRoutes } from './chargebacksRoutes';
 
 import { authentication } from '../middleware/authentication';
 
@@ -13,11 +11,9 @@ const router = Router();
 
 router.use(authentication);
 
-router.use('/api/v1', unitsRoutes);
-router.use('/api/v1', professionalsRoutes);
-router.use('/api/v1', slotsRoutes);
-router.use('/api/v1', cancelingRoutes);
-router.use('/api/v1', appointmentsRoutes);
-router.use('/api/v1', revenuesRoutes);
+router.use('/api/v1', inventorysRoutes);
+router.use('/api/v1', movementsRoutes);
+router.use('/api/v1', reassignmentsRoutes);
+router.use('/api/v1', chargebacksRoutes);
 
 export { router };
