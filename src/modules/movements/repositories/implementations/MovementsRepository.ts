@@ -27,13 +27,6 @@ export class MovementsRepository implements IMovementsRepository {
         throw new Error('slotNotAvailable');
       }
 
-      [result] = await knex.raw(
-        `SELECT cd_dti_agenda FROM dataintegra.tbl_dti_agendamento WHERE cd_produto = '${data.productId}' AND nr_carteira = '${data.patient.benefitCode}'`,
-      );
-      if (result) {
-        throw new Error('forbiddenMovement');
-      }
-
       const seq_agenda = await knex.raw(
         `SELECT dataintegra.seq_dti_agendamento.nextval seq_dti from dual`,
       );
