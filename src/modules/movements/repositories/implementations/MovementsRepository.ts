@@ -5,7 +5,7 @@ import knex from '../../../../database/db';
 export class MovementsRepository implements IMovementsRepository {
   private static INSTANCE: MovementsRepository;
 
-  private constructor() { }
+  private constructor() {}
   public static getInstance(): MovementsRepository {
     if (!MovementsRepository.INSTANCE) {
       MovementsRepository.INSTANCE = new MovementsRepository();
@@ -75,10 +75,10 @@ export class MovementsRepository implements IMovementsRepository {
         `;
       await knex.raw(sql);
 
-      console.log(result.length)
+      console.log(result.length);
 
       if (!result || result.length === 0) {
-        console.log('Não encontrado registro no banco de dados')
+        console.log('Não encontrado registro no banco de dados');
         return {
           result: 'ERROR',
           debug_msg: 'Não encontrado registro no banco de dados',
@@ -103,32 +103,44 @@ export class MovementsRepository implements IMovementsRepository {
           COD_PROJETO: null,
           GERADOR: null,
           COD_DIMENSAO: null,
-          RATEIO: element.RATEIO
+          RATEIO: element.RATEIO,
         });
       });
 
-      console.log(result[0].COD_UNID)
+      console.log(result[0].COD_UNID);
 
       if (result[0].COD_UNID === 19) {
-        console.log('Entrou SAMES')
-        const data = { PAGINAS: 1, COMPETENCIA: result[0].COMP, CARGA_ADICIONAL: 0, PAGINA: 1, IMPORTACAO: dados }
+        console.log('Entrou SAMES');
+        const data = {
+          PAGINAS: 1,
+          COMPETENCIA: result[0].COMP,
+          CARGA_ADICIONAL: 0,
+          PAGINA: 1,
+          IMPORTACAO: dados,
+        };
         const response = await axios.post(url_SAMES, data, {
           headers: {
-            'client_id': 'dd117c3f-2887-3eae-baab-84477ce72029',
+            client_id: 'dd117c3f-2887-3eae-baab-84477ce72029',
             'Content-Type': 'application/json',
-          }
-        })
+          },
+        });
       }
 
       if (result[0].COD_UNID === 7) {
-        console.log('Entrou HEMO')
-        const data = { PAGINAS: 1, COMPETENCIA: result[0].COMP, CARGA_ADICIONAL: 0, PAGINA: 1, IMPORTACAO: dados }
+        console.log('Entrou HEMO');
+        const data = {
+          PAGINAS: 1,
+          COMPETENCIA: result[0].COMP,
+          CARGA_ADICIONAL: 0,
+          PAGINA: 1,
+          IMPORTACAO: dados,
+        };
         const response = await axios.post(url_HEMO, data, {
           headers: {
-            'client_id': '5ec63be2-138d-3086-a6fa-903bc3af53df',
+            client_id: '5ec63be2-138d-3086-a6fa-903bc3af53df',
             'Content-Type': 'application/json',
-          }
-        })
+          },
+        });
       }
       console.log(result_func_agenda);
     } catch (error) {

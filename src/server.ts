@@ -6,7 +6,7 @@ import cors from 'cors';
 import { router } from './routes';
 import swaggerDoc from './swagger.json';
 
-const cron = "node-cron";
+const cron = 'node-cron';
 
 const app = express();
 app.use(cors());

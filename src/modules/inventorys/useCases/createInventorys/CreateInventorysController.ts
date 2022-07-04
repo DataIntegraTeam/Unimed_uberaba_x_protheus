@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { CreateInventorysUseCase } from './CreateInventorysUseCase';
 
 class CreateInventorysController {
-  constructor(private createInventorysUseCase: CreateInventorysUseCase) { }
+  constructor(private createInventorysUseCase: CreateInventorysUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
     try {

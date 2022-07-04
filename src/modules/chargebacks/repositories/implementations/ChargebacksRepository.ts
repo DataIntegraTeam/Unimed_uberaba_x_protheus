@@ -5,7 +5,7 @@ import knex from '../../../../database/db';
 export class ChargebacksRepository implements IChargebacksRepository {
   private static INSTANCE: ChargebacksRepository;
 
-  private constructor() { }
+  private constructor() {}
   public static getInstance(): ChargebacksRepository {
     if (!ChargebacksRepository.INSTANCE) {
       ChargebacksRepository.INSTANCE = new ChargebacksRepository();

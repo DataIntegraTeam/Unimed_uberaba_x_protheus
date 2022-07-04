@@ -2,7 +2,7 @@ import { Chargeback } from '../../model/Chargeback';
 import { IChargebacksRepository } from '../../repositories/IChargebacksRepository';
 
 class CreateChargebacksUseCase {
-  constructor(private chargebacksRepository: IChargebacksRepository) { }
+  constructor(private chargebacksRepository: IChargebacksRepository) {}
 
   async execute(data: Chargeback): Promise<string | Error> {
     const date = new Date(data.patient.birthDate);

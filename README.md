@@ -7,3 +7,11 @@ Integração Unimed Uberaba x Protejus
 4 - Estorno = Chargeback
 
 Post 
+
+
+Deletar o arquivo yarn-error.log.
+
+Converte os arquivo para Javascript: yarn build.
+
+Rodar API's: yarn dev.
+Rodar API's: npm run dev.

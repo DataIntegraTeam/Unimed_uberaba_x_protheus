@@ -4,9 +4,7 @@ import { CreateMovementsUseCase } from './CreateMovementsUseCase';
 
 const movementsRepository = MovementsRepository.getInstance();
 
-const createMovementsUseCase = new CreateMovementsUseCase(
-  movementsRepository,
-);
+const createMovementsUseCase = new CreateMovementsUseCase(movementsRepository);
 
 const createMovementsController = new CreateMovementsController(
   createMovementsUseCase,

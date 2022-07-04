@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { CreateMovementsUseCase } from './CreateMovementsUseCase';
 
 class CreateMovementsController {
-  constructor(private createMovementsUseCase: CreateMovementsUseCase) { }
+  constructor(private createMovementsUseCase: CreateMovementsUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
     try {

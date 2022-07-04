@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { CreateChargebacksUseCase } from './CreateChargebacksUseCase';
 
 class CreateChargebacksController {
-  constructor(private createChargebacksUseCase: CreateChargebacksUseCase) { }
+  constructor(private createChargebacksUseCase: CreateChargebacksUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
     try {

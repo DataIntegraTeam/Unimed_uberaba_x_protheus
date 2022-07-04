@@ -11,7 +11,7 @@ class CreateMovementsUseCase {
     if (!(result >= 18 && result <= 50)) {
       throw new Error('preRequisiteMovement');
     }
-    data.movementId = data.slotId;
+    // data.movementId = data.slotId;
     await this.movementsRepository.create(data);
 
     return data.movementId;

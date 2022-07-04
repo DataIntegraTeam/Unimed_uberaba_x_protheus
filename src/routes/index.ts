@@ -7,7 +7,6 @@ import { chargebacksRoutes } from './chargebacksRoutes';
 
 import { authentication } from '../middleware/authentication';
 
-
 const router = Router();
 
 router.use(authentication);
