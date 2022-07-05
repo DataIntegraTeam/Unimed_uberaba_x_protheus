@@ -11,7 +11,8 @@ Post
 
 Deletar o arquivo yarn-error.log.
 
-Converte os arquivo para Javascript: yarn build.
+Converte os arquivo para Javascript: `yarn build`.
 
-Rodar API's: yarn dev.
-Rodar API's: npm run dev.
+Rodar API's: `yarn dev`.
+
+Rodar API's: `npm run dev`.
