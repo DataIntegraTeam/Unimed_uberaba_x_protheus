@@ -2,7 +2,7 @@ import { Reassignment } from '../../model/Reassignment';
 import { IReassignmentsRepository } from '../../repositories/IReassignmentsRepository';
 
 class CreateReassignmentsUseCase {
-  constructor(private reassignmentsRepository: IReassignmentsRepository) { }
+  constructor(private reassignmentsRepository: IReassignmentsRepository) {}
 
   async execute(data: Reassignment): Promise<string | Error> {
     const date = new Date(data.patient.birthDate);

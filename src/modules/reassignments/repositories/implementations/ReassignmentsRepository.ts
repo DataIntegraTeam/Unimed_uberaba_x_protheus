@@ -5,7 +5,7 @@ import knex from '../../../../database/db';
 export class ReassignmentsRepository implements IReassignmentsRepository {
   private static INSTANCE: ReassignmentsRepository;
 
-  private constructor() { }
+  private constructor() {}
   public static getInstance(): ReassignmentsRepository {
     if (!ReassignmentsRepository.INSTANCE) {
       ReassignmentsRepository.INSTANCE = new ReassignmentsRepository();

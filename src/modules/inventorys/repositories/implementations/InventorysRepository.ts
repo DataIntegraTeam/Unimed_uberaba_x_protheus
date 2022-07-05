@@ -5,7 +5,7 @@ import knex from '../../../../database/db';
 export class InventorysRepository implements IInventorysRepository {
   private static INSTANCE: InventorysRepository;
 
-  private constructor() { }
+  private constructor() {}
   public static getInstance(): InventorysRepository {
     if (!InventorysRepository.INSTANCE) {
       InventorysRepository.INSTANCE = new InventorysRepository();

@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { CreateReassignmentsUseCase } from './CreateReassignmentsUseCase';
 
 class CreateReassignmentsController {
-  constructor(private createReassignmentsUseCase: CreateReassignmentsUseCase) { }
+  constructor(private createReassignmentsUseCase: CreateReassignmentsUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
     try {

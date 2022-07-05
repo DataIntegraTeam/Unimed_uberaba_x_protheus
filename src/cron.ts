@@ -1,15 +1,15 @@
-// import express from "express";
-import { getDre } from "./routes/index";
+//import "dotenv/config";
+import cron from 'node-cron';
 
-const cron = "node-cron";
+import { getMovementsUseCase } from './modules/movements/useCases/getMovements';
 
 
-cron.schedule("*/10 * * * *", async (req, res) => {
-  console.log("Executando a tarefa a cada 5 minuto");
-  const json = await getDre();
-  console.res.json(json);
-  return res.json(json);
+cron.schedule('*/10 * * * *', async () => {
+  console.log('Executando a tarefa a cada 5 minuto');
+  const response = await getMovementsUseCase.execute()
+  // const response = await getMovementsUseCase.execute()
+
+  console.log(response)
 });
-
 
 export default cron;
