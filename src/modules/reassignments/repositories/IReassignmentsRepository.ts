@@ -1,7 +1,7 @@
 import { Reassignment } from '../model/Reassignment';
 
 interface IReassignmentsRepository {
-  create(data: Reassignment): Promise<void | Error>;
+  get(): Promise<Reassignment | Error>;
 }
 
 export { IReassignmentsRepository };
