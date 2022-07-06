@@ -1,7 +1,7 @@
 import { Chargeback } from '../model/Chargeback';
 
 interface IChargebacksRepository {
-  create(data: Chargeback): Promise<void | Error>;
+  get(): Promise<Chargeback | Error>;
 }
 
 export { IChargebacksRepository };
