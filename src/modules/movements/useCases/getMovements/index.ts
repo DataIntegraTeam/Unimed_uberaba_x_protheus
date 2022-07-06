@@ -6,5 +6,4 @@ const movementsRepository = MovementsRepository.getInstance();
 
 const getMovementsUseCase = new GetMovementsUseCase(movementsRepository);
 
-
 export { getMovementsUseCase };
