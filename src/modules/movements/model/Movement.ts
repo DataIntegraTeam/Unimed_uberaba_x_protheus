@@ -37,7 +37,7 @@ class Movement {
       unidade: string; //"unidade":"CX",
       armazem: number; //"armazem":"10",
       quantidade: number; //"contagem":13
-    }
+    },
   ];
 
   constructor() {
