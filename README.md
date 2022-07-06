@@ -5,6 +5,7 @@ Integração Unimed Uberaba x Protejus
 2 - Inventário = Inventory
 3 - Transferência = Reassignment
 4 - Estorno = Chargeback
+5 - 
 
 Post 
 

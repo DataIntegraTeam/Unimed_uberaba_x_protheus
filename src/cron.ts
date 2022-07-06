@@ -2,6 +2,7 @@
 import cron from 'node-cron';
 
 import { getMovementsUseCase } from './modules/movements/useCases/getMovements';
+// import { getMovementsUseCase } from './modules/movements/useCases/getMovements';
 
 cron.schedule('*/10 * * * *', async () => {
   console.log('Executando a tarefa a cada 5 minuto');
