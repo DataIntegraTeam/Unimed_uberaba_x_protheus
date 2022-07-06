@@ -5,6 +5,7 @@ import { getMovementsUseCase } from './modules/movements/useCases/getMovements';
 import { getInventorysUseCase } from './modules/inventorys/useCases/getInventorys';
 import { getChargebacksUseCase } from './modules/chargebacks/useCases/getChargebacks';
 import { getReassignmentsUseCase } from './modules/reassignments/useCases/getReassignments';
+import { getInvoiceUseCase } from './modules/invoice/useCases/getInvoice';
 
 cron.schedule('*/10 * * * *', async () => {
   console.log('Executando a tarefa a cada 5 minuto');
@@ -12,6 +13,7 @@ cron.schedule('*/10 * * * *', async () => {
   //const response = await getInventorysUseCase.execute();
   //const response = await getChargebacksUseCase.execute();
   //const response = await getReassignmentsUseCase.execute();
+  //const response = await getInvoiceUseCase.execute();
 
   console.log(response);
 });
