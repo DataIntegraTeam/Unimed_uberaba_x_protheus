@@ -9,11 +9,29 @@ import { getReassignmentsUseCase } from './modules/reassignments/useCases/getRea
 cron.schedule('*/10 * * * *', async () => {
   console.log('Executando a tarefa a cada 5 minuto');
   const response = await getMovementsUseCase.execute();
-  //const response = await getInventorysUseCase.execute();
-  //const response = await getChargebacksUseCase.execute();
-  //const response = await getReassignmentsUseCase.execute();
 
   console.log(response);
 });
+cron.schedule('*/10 * * * *', async () => {
+  console.log('Executando a tarefa a cada 5 minuto');
+  const response = await getInventorysUseCase.execute();
+
+  console.log(response);
+});
+
+cron.schedule('*/10 * * * *', async () => {
+  console.log('Executando a tarefa a cada 5 minuto');
+  const response = await getChargebacksUseCase.execute();
+
+  console.log(response);
+});
+
+cron.schedule('*/10 * * * *', async () => {
+  console.log('Executando a tarefa a cada 5 minuto');
+  const response = await getReassignmentsUseCase.execute();
+
+  console.log(response);
+});
+
 
 export default cron;

@@ -18,3 +18,5 @@ Converte os arquivo para Javascript: `yarn build`.
 Rodar API's: `yarn dev`.
 
 Rodar API's: `npm run dev`.
+
+>>>>
